@@ -1,7 +1,18 @@
+/*
+ * Quick sort:
+ * - low memory usage
+ * - cache friendly
+ * - not stable
+ * - best/average case O(n * log(n))
+ * - worst case O(n^2)
+ * - preferred for smaller data sets (which fit in memory)
+ */
+
 fn main() {
     let mut v = vec!(9, 2, 8, 5, 1, 6, 7, 3, 10, 4);
-    quick_sort(&mut v);
-    println!("{:?}", v);
+        println!("Input: {:?}", v);
+        quick_sort(&mut v);
+        println!("Output {:?}", v);
 }
 
 fn quick_sort(nums: &mut Vec<i32>) {
